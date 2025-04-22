@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-primary-blue">
+    <section id="about" className="py-20 bg-gray-50 dark:bg-primary-blue transition-colors duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -11,7 +11,7 @@ const About = () => {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-white">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-gray-900 dark:text-white">
             About Me
           </h2>
           
@@ -47,11 +47,11 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="flex-1 text-left"
             >
-              <p className="text-lg text-gray-300 mb-4">
-                Hello! I'm a passionate software developer with a keen interest in building innovative solutions. I love turning complex problems into simple, beautiful, and intuitive designs.
+              <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
+                I'm a second-year Diploma Engineering student at K.J. Somaiya Polytechnic, passionate about tech and design. With skills in HTML, CSS, C, C++, Dart, and tools like Figma and Canva, I love turning ideas into intuitive interfaces.
               </p>
-              <p className="text-lg text-gray-300">
-                My journey in software development has been driven by curiosity and a constant desire to learn. I believe in writing clean, efficient code and creating user-friendly applications that make a difference.
+              <p className="text-lg text-gray-700 dark:text-gray-300">
+                Lately, I've been diving deeper into Python, JavaScript, and Java to build impactful, data-driven solutions. Whether I'm writing clean code or crafting a UI, I blend functionality with creativity to make things that just work—beautifully.            
               </p>
             </motion.div>
           </div>

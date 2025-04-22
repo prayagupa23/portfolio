@@ -23,7 +23,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-primary-blue">
+    <section id="contact" className="py-20 bg-white dark:bg-primary-blue transition-colors duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,8 +32,8 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">Get in Touch</h2>
-          <p className="text-lg text-gray-400 mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 dark:text-white">Get in Touch</h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
             Have a question or want to work together? Feel free to reach out!
           </p>
         </motion.div>
@@ -49,7 +49,7 @@ const Contact = () => {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-300 mb-1"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
               >
                 Name
               </label>
@@ -60,14 +60,14 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 rounded-lg border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
               />
             </div>
 
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-300 mb-1"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
               >
                 Email
               </label>
@@ -78,14 +78,14 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 rounded-lg border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
               />
             </div>
 
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-gray-300 mb-1"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
               >
                 Message
               </label>
@@ -96,13 +96,13 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 rows={4}
-                className="w-full px-4 py-2 rounded-lg border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
               />
             </div>
 
             <motion.button
               type="submit"
-              className="w-full btn-primary bg-blue-600 hover:bg-blue-700"
+              className="w-full btn-primary bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -117,12 +117,12 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mt-12 text-center"
           >
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
               Or reach out directly via email
             </p>
             <motion.a
               href="mailto:prayagupadhyaya23@gmail.com"
-              className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors"
+              className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 font-medium transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

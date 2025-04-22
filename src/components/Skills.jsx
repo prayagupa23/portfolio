@@ -13,28 +13,27 @@ const skillCategories = [
   {
     title: 'Backend',
     skills: [
-      { name: 'Node.js', level: 85 },
       { name: 'Python', level: 80 },
-      { name: 'SQL', level: 75 },
-      { name: 'MongoDB', level: 80 },
-      { name: 'REST APIs', level: 85 },
+      { name: 'Java', level: 70 },
+      { name: 'SQL', level: 50 },
+      { name: 'REST API', level: 45 },
+      { name: 'Supabase', level: 25 },
     ],
   },
   {
     title: 'Tools & Others',
     skills: [
-      { name: 'Git', level: 85 },
-      { name: 'Docker', level: 75 },
-      { name: 'AWS', level: 70 },
-      { name: 'Linux', level: 80 },
-      { name: 'CI/CD', level: 75 },
+      { name: 'Git', level: 50 },
+      { name: 'Cursor', level: 90 },
+      { name: 'Canva', level: 80 },
+      { name: 'MS Office', level: 100 },
     ],
   },
 ]
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-primary-dark">
+    <section id="skills" className="py-20 bg-gray-50 dark:bg-primary-dark transition-colors duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,8 +42,8 @@ const Skills = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">Skills & Expertise</h2>
-          <p className="text-lg text-gray-400">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 dark:text-white">Skills & Expertise</h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400">
             Technologies and tools I work with
           </p>
         </motion.div>

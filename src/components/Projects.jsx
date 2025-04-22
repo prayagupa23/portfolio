@@ -9,14 +9,15 @@ import project3Image from '../assets/projects/project3.png'
 const projects = [
   {
     title: 'Rakshak',
-    description: 'A Flutter-based AI women’s safety app with gender verification, real-time alerts, anonymous chats, and voice-activated SOS, powered by Firebase.',
+    description: "A Flutter-based AI women's safety app with gender verification, real-time alerts, anonymous chats, and voice-activated SOS, powered by Firebase.",
     tech: [
       { name: 'Flutter', logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg' },
       { name: 'Firebase', logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-original.svg' },
       { name: 'Tensorflow', logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg' },
     ],
     image: project1Image,
-    link: 'https://github.com/prayagupa23/rakshak-backup'
+    link: 'https://github.com/prayagupa23/rakshak-backup',
+    status: 'live',
   },
   {
     title: 'CyberPro',
@@ -27,7 +28,8 @@ const projects = [
       { name: 'JavaScript', logo: 'https://cdn.worldvectorlogo.com/logos/javascript-1.svg' },
     ],
     image: project2Image,
-    link: 'https://github.com/prayagupa23/Cyber-Pro'
+    link: 'https://github.com/prayagupa23/Cyber-Pro',
+    status: 'live',
   },
   {
     title: 'MuseFlow',
@@ -36,16 +38,17 @@ const projects = [
       { name: 'Flutter', logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg' },
       { name: 'Supabase', logo: 'https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg' },
       { name: 'Dart', logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-original.svg' },
-      { name: 'Figma', logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg' }
+      { name: 'Figma', logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg' },
     ],
     image: project3Image,
-    link: 'https://github.com/sparth292/MuseFlow'
-  }
+    link: 'https://github.com/sparth292/MuseFlow',
+    status: 'in-progress',
+  },
 ]
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 bg-primary-dark">
+    <section id="projects" className="py-20 bg-white dark:bg-primary-dark transition-colors duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,8 +57,8 @@ const Projects = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">My Works</h2>
-          <p className="text-lg text-gray-400">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 dark:text-white">My Works</h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400">
             Witness the beauty of code through my lens, as I showcase stunning projects that evoke wonder and appreciation.
           </p>
         </motion.div>
@@ -94,6 +97,13 @@ const Projects = () => {
                           />
                         </div>
                       ))}
+                      <div className={`ml-2 px-3 py-1 rounded-full text-xs font-medium ${
+                        project.status === 'live' 
+                          ? 'bg-green-500/20 text-green-400' 
+                          : 'bg-yellow-500/20 text-yellow-400'
+                      }`}>
+                        {project.status === 'live' ? 'Live' : 'In Progress'}
+                      </div>
                     </div>
                     <motion.a
                       href={project.link}
@@ -118,13 +128,13 @@ const Projects = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="mt-16 text-center"
         >
-          <h3 className="text-2xl font-bold text-white mb-6">Connect With Me</h3>
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Connect With Me</h3>
           <div className="flex justify-center items-center gap-6">
             <motion.a
               href="https://github.com/prayagupa23"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -136,7 +146,7 @@ const Projects = () => {
               href="https://linkedin.com/in/prayag-upadhyaya"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -148,7 +158,7 @@ const Projects = () => {
               href="https://x.com/Prayag_23"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >

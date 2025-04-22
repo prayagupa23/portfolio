@@ -8,9 +8,21 @@ import Skills from './components/Skills'
 import Contact from './components/Contact'
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(() => {
+    // Check if dark mode preference is stored in localStorage
+    const saved = localStorage.getItem('darkMode')
+    if (saved !== null) {
+      return JSON.parse(saved)
+    }
+    // If no saved preference, check system preference
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+  })
 
   useEffect(() => {
+    // Save dark mode preference to localStorage
+    localStorage.setItem('darkMode', JSON.stringify(darkMode))
+    
+    // Apply dark mode class to document
     if (darkMode) {
       document.documentElement.classList.add('dark')
     } else {
@@ -19,7 +31,7 @@ function App() {
   }, [darkMode])
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary-dark to-primary-blue transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-primary-dark transition-colors duration-300">
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <main>
         <AnimatePresence mode="wait">

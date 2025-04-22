@@ -27,7 +27,7 @@ const Hero = () => {
   }, [])
 
   return (
-    <section className="min-h-screen flex items-center justify-center py-20 bg-gradient-to-b from-primary-dark to-primary-blue">
+    <section className="min-h-screen flex items-center justify-center py-20 bg-white dark:bg-primary-dark transition-colors duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <motion.div
@@ -46,10 +46,10 @@ const Hero = () => {
                 />
               </span>
             </h1>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl text-gray-300 mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl text-gray-700 dark:text-gray-300 mb-8">
               Software Developer
             </h2>
-            <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
               Crafting digital experiences with code and turning ideas into elegant solutions.
             </p>
           </motion.div>
